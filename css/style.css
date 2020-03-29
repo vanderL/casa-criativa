@@ -1,0 +1,27 @@
+/*Estilo geral*/
+body {
+    background-color: #cccccc;
+    color: #25282b;
+    text-align: center;
+}
+
+/*estilo button*/
+button {
+    color: #ff5e84;
+    border: none;
+    font-weight: bold;
+    background: none;
+}
+
+.fat {
+    color: #fff;
+    background: #ff5e84;
+}
+/* footer */
+ footer a {
+     color: #25282b;
+ }
+
+ .hide {
+     display: none;
+ }
