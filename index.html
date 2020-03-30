@@ -3,33 +3,76 @@
     <meta charset="UTF-8">
     <head>
         <title>Casa criativa</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-            <img src="img/logo.png" alt="Casa criativa">
-        </header>
-        <p>Ficar em casa em períodos longos, não deve ser nada fácil</p>
-        <p>Iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.</p>
-        <p>Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.</p>
-        <button>+ Adicionar ideia</button>
-        <button class="fat">Ver Ideias</button>
-        <footer id="footer">
-            <p>Elaborado por 
-                <a href="https://github.com/vanderL">Vander</a>
-            </p>
-        </footer>
-        <script>
 
-            document
-            .querySelector("button.fat")
-            .addEventListener("click", function(){
-                document
-                .querySelector("#footer")
-                .classList
-                .toggle("hide")
-            });
+        <div id="container">
+            <section id="intro">
+                <header>
+                    <img src="img/logo.png" alt="Casa criativa">
+                </header>
+                <main>
+                    <p>
+                        Ficar em casa em períodos longos, não deve ser nada fácil
+                    </p>
+                    <p>
+                        Iremos catalogar ideias, <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.
+                    </p>
+                    <p>
+                        Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.
+                    </p>
+                </main>
+                <section id="buttons">
+                    <button>+ Adicionar ideia</button>
+                    <button class="fat">Ver Ideias</button>
+                </section>
+                <footer id="footer">
+                    <p>Elaborado por 
+                        <a href="https://github.com/vanderL">Vander</a>
+                    </p>
+                </footer>  
+            </section>
 
-        </script>
+            <section id="last-ideias">
+                <div class="idea">
+                    <img src="img/005-read.svg" alt="Imagem de leitura">
+                    <div class="content">
+                        <h3>Leitura</h3>
+                        <p class="sub">Estudo</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem eius facere inventore asperiores ab dicta nostrum nesciunt hic tempora necessitatibus recusandae, provident, cupiditate animi error ipsam. Molestias, incidunt nobis.
+                        </div>
+                        <a href="#">Ir para a ideia</a>
+                    </div>
+                </div>
+                <div class="idea">
+                    <img src="img/027-spa.svg" alt="Imagem de leitura">
+                    <div class="content">
+                        <h3>Relaxamento</h3>
+                        <p class="sub">Saúde</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem eius facere inventore asperiores ab dicta nostrum nesciunt hic tempora necessitatibus recusandae, provident, cupiditate animi error ipsam. Molestias, incidunt nobis.
+                        </div>
+                        <a href="#">Ir para a ideia</a>
+                    </div>
+                </div>
+                <div class="idea">
+                    <img src="img/026-watch tv.svg" alt="Imagem de leitura">
+                    <div class="content">
+                        <h3>Maratonar séries</h3>
+                        <p class="sub">Entretenimento</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem eius facere inventore asperiores ab dicta nostrum nesciunt hic tempora necessitatibus recusandae, provident, cupiditate animi error ipsam. Molestias, incidunt nobis.
+                        </div>
+                        <a href="#">Ir para a ideia</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+            
+        <script src="main.js"></script>
     </body>
 </html>

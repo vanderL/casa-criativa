@@ -1,27 +1,123 @@
 /*Estilo geral*/
 body {
-    background-color: #cccccc;
+    background-color: #e5e5e5;
     color: #25282b;
-    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
-/*estilo button*/
+.hide {
+    display: none;
+}
+
+a {
+    color: #ff5e84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, .description {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+#container {
+    width: 80%;
+    max-width: 980px;
+    margin: 40px auto;
+    /*background: #19ff;*/
+    display: flex;
+}
+
+#intro {
+    width: 300px;
+    margin-right: 20px;
+
+}
+
+main {
+    margin: 32px 0px;
+}
+
+#buttons {
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-evenly;
+}
+
 button {
+    background: none;
     color: #ff5e84;
     border: none;
+    font-size: 14px;
     font-weight: bold;
-    background: none;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    outline: none;
 }
 
-.fat {
+button:hover {
+    text-decoration: underline;
+}
+
+
+button.fat {
     color: #fff;
     background: #ff5e84;
+    width: 150px;
+    height: 40px;
+    border-radius: 60px 0;
+    box-shadow: 0px 8px 6px black;
+/*box-shadow: 0px 8px 16px #ff5e8432;*/
+}
+
+button.fat:hover {
+    text-decoration: none;
 }
 /* footer */
- footer a {
-     color: #25282b;
- }
+footer {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #777;
+}
 
- .hide {
-     display: none;
- }
+footer a {
+    opacity: 0.7;
+}
+
+.idea {
+    display: flex;
+    margin-bottom: 32px;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.5);
+}
+
+.idea img {
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+}
+
+.idea h3 {
+    margin: 0;
+}
+
+.sub {
+    margin: 8px 0;
+    color: #777;
+}
+
+.description {
+    margin: 16px 0;
+}
