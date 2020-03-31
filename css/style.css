@@ -6,6 +6,9 @@ body {
     margin: 0;
 }
 
+body.hideScroll {
+    overflow: hidden;
+}
 
 a {
     color: #ff5e84;
@@ -23,6 +26,34 @@ p, .description {
     letter-spacing: 0.1px;
 }
 
+.button {
+    color: #fff;
+    background: #ff5e84;
+    width: 150px;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 60px 0;
+    box-shadow: 0px 8px 6px black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    transition: 300ms;
+/*box-shadow: 0px 8px 16px #ff5e8432;*/
+}
+
+.button:hover {
+    text-decoration: none;
+    background-color: #0984e3;
+
+}
+
+/*padrão*/
 #container {
     width: 80%;
     max-width: 980px;
@@ -33,7 +64,7 @@ p, .description {
 
 #intro {
     width: 300px;
-    margin-right: 20px;
+    margin-right: 64px;
 
 }
 
@@ -64,19 +95,7 @@ button:hover {
 }
 
 
-button.fat {
-    color: #fff;
-    background: #ff5e84;
-    width: 150px;
-    height: 40px;
-    border-radius: 60px 0;
-    box-shadow: 0px 8px 6px black;
-/*box-shadow: 0px 8px 16px #ff5e8432;*/
-}
 
-button.fat:hover {
-    text-decoration: none;
-}
 /* footer */
 footer {
     text-align: center;
@@ -126,16 +145,23 @@ footer a {
     background: #ff5e84;
     position: absolute;
     top: 0;
-    width: 100vw;
-    height: 100vw;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+
     display: flex;
     justify-content: center;
 
-    transition: 1000ms;
+    transition: 700ms;
+
+    overflow: auto;
+
 }
 
+
 #modal .content{
-    margin-top: 128px;
+    margin-top: 15%;
     color: #fff;
 }
 
@@ -147,7 +173,7 @@ footer a {
 #modal form {
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 15%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -227,6 +253,71 @@ form button:hover {
     visibility: hidden;
 }
 
-.hide {
-    display: none;
+
+/*** IDEIAS.HTML ***/
+
+#page-ideias #container {
+    display: block;
 }
+
+#page-ideias header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideias nav li {
+    list-style: none;
+    margin-right: 16px;
+}
+
+#page-ideias nav li a {
+    color: #25282b;
+}
+
+#page-ideias nav li a.button {
+    color: #fff;
+}
+
+#page-ideias nav li:last-child{
+    margin: 0;
+}
+
+
+
+section#title {
+    text-align: center;
+    margin: 64px 0;
+
+}
+
+section#title p{
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1 {
+    margin: 0;
+    font-size: 28px;
+
+}
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+section#ideas .idea {
+    margin: 0;
+}
+
+
+section#title,
+section#ideas,
+footer {
+    margin-top: 64px;
+} 

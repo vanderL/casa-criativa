@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ideias - Casa Criativa</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body id="page-ideias" >
+
+
+    <div id="container">
+        <header>
+            <a href="index.html">
+                <img src="img/logo.png" alt="Casa criativa">
+            </a>
+            <nav>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#" class="button" onclick="onOff()">Nova ideia</a></li>
+            </nav>
+        </header>
+    
+        <section id="title">
+            <p>em exibição</p>
+            <h1>Ideias</h1>
+        </section>
+        <main>
+            <section id="ideas">
+                <div class="idea">
+                    <img src="img/005-read.svg" alt="Imagem de leitura">
+                    <div class="content">
+                        <h3>Leitura</h3>
+                        <p class="sub">Estudo</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem eius facere inventore asperiores ab dicta nostrum nesciunt hic tempora necessitatibus recusandae, provident, cupiditate animi error ipsam. Molestias, incidunt nobis.
+                        </div>
+                        <a href="#">Ir para a ideia</a>
+                    </div>
+                </div>
+                <div class="idea">
+                    <img src="img/027-spa.svg" alt="Imagem de leitura">
+                    <div class="content">
+                        <h3>Relaxamento</h3>
+                        <p class="sub">Saúde</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem eius facere inventore asperiores ab dicta nostrum nesciunt hic tempora necessitatibus recusandae, provident, cupiditate animi error ipsam. Molestias, incidunt nobis.
+                        </div>
+                        <a href="#">Ir para a ideia</a>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="img/001-play with child.svg" alt="Imagem de bricando com crianças">
+                    <div class="content">
+                        <h3>Brincar com as crianças</h3>
+                        <p class="sub">Familia</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem eius facere inventore asperiores ab dicta nostrum nesciunt hic tempora necessitatibus recusandae, provident, cupiditate animi error ipsam. Molestias, incidunt nobis.
+                        </div>
+                        <a href="#">Ir para a ideia</a>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="img/002-online.svg" alt="Imagem de online">
+                    <div class="content">
+                        <h3>Chat online</h3>
+                        <p class="sub">Socialização</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem eius facere inventore asperiores ab dicta nostrum nesciunt hic tempora necessitatibus recusandae, provident, cupiditate animi error ipsam. Molestias, incidunt nobis.
+                        </div>
+                        <a href="#">Ir para a ideia</a>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="img/026-watch tv.svg" alt="Imagem de leitura">
+                    <div class="content">
+                        <h3>Maratonar séries</h3>
+                        <p class="sub">Entretenimento</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo exercitationem eius facere inventore asperiores ab dicta nostrum nesciunt hic tempora necessitatibus recusandae, provident, cupiditate animi error ipsam. Molestias, incidunt nobis.
+                        </div>
+                        <a href="#">Ir para a ideia</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <footer id="footer">
+            <p>Elaborado por 
+                <a href="https://github.com/vanderL" target="_blank" >Vander</a>
+            </p>
+        </footer>  
+    </div>
+    
+     <!--Modal-->
+     <div id="modal" class="hide">
+        <div class="content">
+            
+           <h1>Nova Ideia</h1>
+            
+            <form action="">
+               <div class="input-wrapper">
+                   <label for="title">Titulo da ideia</label>
+                   <input type="text" name="title">
+               </div>
+
+                <div class="input-wrapper">
+                   <label for="category">Categoria</label>
+                   <input type="text" name="category">
+                </div>
+
+                <div class="input-wrapper">
+                   <label for="image">Link da imagem</label>
+                   <input type="url" name="image">
+                </div>
+
+                <div class="input-wrapper">
+                   <label for="description">Digite uma descrição para essa ideia</label>
+                   <textarea name="description" cols="30" rows="10"></textarea>   
+                </div>
+
+                <div class="input-wrapper">
+                   <label for="link">Link da ideia</label>
+                   <input type="url" name="link">
+                </div>
+                <a href="#" onclick="onOff()">voltar</a>
+                <button>Salvar</button>               
+              
+            </form>
+        </div>
+    </div> 
+    
+   <!-- --> 
+   <script src="main.js"></script>
+</body>
+</html>
