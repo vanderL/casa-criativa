@@ -2,7 +2,8 @@
 const express = require("express")
 const server = express()
 
-const ideas = [
+const db  = require("./db")
+/*const ideas = [
     {
         img: "https://image.flaticon.com/icons/svg/2729/2729001.svg",
         title: "Leitura",
@@ -38,12 +39,15 @@ const ideas = [
         description: "Lorem ipsum dolor sit amet",
         url: "https://instagram.com/vander_1"
     },
-]
+]*/
 
 
 
 // configurar arquivos estáticos (css, script, imagens)
 server.use(express.static("public"))
+
+// habilitar uso do req.doby
+server.use(express.urlencoded({ urlencoded: true }))
 
 //npm i nunjucks -> para instalar
 //configuração do nunjuncks
@@ -57,24 +61,69 @@ nunjucks.configure("views", {
 // e capturo o pedido do cliente para responder
 server.get("/", function(req, res){
 
-    const reversedIdeas = [...ideas].reverse()
-
-    let lastIdeas = []
-    for (let idea of reversedIdeas) {
-        if(lastIdeas.length < 2){
-            lastIdeas.push(idea)
+    db.all(`SELECT * FROM ideas`, function(err, rows){
+        if (err) {
+            console.log(err)
+            return res.send("Erro no Banco de Dados!")
         }
-    }
+        
+        const reversedIdeas = [...rows].reverse()
 
-  //  console.log(lastIdeas.length)
-
-    return res.render("index.html", { ideas: lastIdeas })
+        let lastIdeas = []
+        for (let idea of reversedIdeas) {
+            if(lastIdeas.length < 2){
+                lastIdeas.push(idea)
+            }
+        }
+    
+        //  console.log(lastIdeas.length)
+        return res.render("index.html", { ideas: lastIdeas })
+    })   
 })
 
 server.get("/ideias", function(req, res){
 
-    const reversedIdeas = [...ideas].reverse()
-    return res.render("ideias.html", { ideas: reversedIdeas})
+    db.all(`SELECT * FROM ideas`, function(err, rows){
+        if (err) {
+            console.log(err)
+            return res.send("Erro no Banco de Dados!")
+        }
+
+        const reversedIdeas = [...rows].reverse()
+        return res.render("ideias.html", { ideas: reversedIdeas})
+    }) 
+})
+
+server.post("/", function(req, res){
+    
+//Insert
+    const query = `
+    INSERT INTO ideas(
+        image,
+        title,
+        category,
+        description,
+        link
+    ) VALUES (?,?,?,?,?);
+`
+    
+    const values = [
+        req.body.image,
+        req.body.title,
+        req.body.category,
+        req.body.description,
+        req.body.link    
+    ]
+
+    db.run(query, values, function(err){
+        if (err) {
+            console.log(err)
+            return res.send("Erro no Banco de Dados!")
+        }
+
+        return res.redirect("/ideias")
+    })
+
 })
 
 // liguei meu servidor na porta 3000
